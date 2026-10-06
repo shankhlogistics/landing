@@ -209,3 +209,24 @@ body {
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: #f1f5f9; }
 ::-webkit-scrollbar-thumb { background: var(--teal); border-radius: 3px; }
+
+/* ── Custom Animations for animate-in ── */
+.animate-in {
+  animation-duration: 300ms;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-fill-mode: both;
+}
+.fade-in {
+  animation-name: fadeInCustom;
+}
+.slide-in-from-bottom-2 {
+  animation-name: slideInBottom2;
+}
+@keyframes fadeInCustom {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideInBottom2 {
+  from { transform: translateY(0.5rem); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
